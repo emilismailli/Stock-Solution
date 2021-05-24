@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>MHM.Accountancy.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{70fbe448-f0da-483f-bf14-e645983e9b36}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>MHM.Accountancy.Database</RootNamespace>
+    <AssemblyName>MHM.Accountancy.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="sys" />
+    <Folder Include="sys\View" />
+    <Folder Include="sys\Procedure" />
+    <Folder Include="sys\Tables" />
+    <Folder Include="sys\Functions" />
+    <Folder Include="CRM" />
+    <Folder Include="WareHouse" />
+    <Folder Include="CRM\Function" />
+    <Folder Include="CRM\Procedures" />
+    <Folder Include="CRM\Views" />
+    <Folder Include="CRM\Tables" />
+    <Folder Include="WareHouse\Tables" />
+    <Folder Include="WareHouse\Views" />
+    <Folder Include="WareHouse\Procedures" />
+    <Folder Include="WareHouse\Function" />
+    <Folder Include="Schemas" />
+    <Folder Include="Accounting" />
+    <Folder Include="Accounting\Functions" />
+    <Folder Include="Accounting\Procedures" />
+    <Folder Include="Accounting\Tables" />
+    <Folder Include="Accounting\UserDefinedTableType" />
+    <Folder Include="Accounting\Views" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Procedures" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\UserDefinedTableType" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="sys\UserDefinedTableType" />
+    <Folder Include="WareHouse\Service" />
+    <Folder Include="WareHouse\Service\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="sys\Tables\MemberGroupPool.sql" />
+    <Build Include="sys\Tables\Principial.sql" />
+    <Build Include="sys\Tables\Menu.sql" />
+    <Build Include="sys\View\VwSysGroup.sql" />
+    <Build Include="sys\View\VwSysMember.sql" />
+    <Build Include="sys\Procedure\spSysAddUser.sql" />
+    <Build Include="sys\Functions\fnSysUserId.sql" />
+    <Build Include="sys\Functions\fnSysGroupId.sql" />
+    <Build Include="sys\Procedure\spSysGroupAddUser.sql" />
+    <Build Include="sys\Procedure\spSysGroupDropUser.sql" />
+    <Build Include="sys\Procedure\spMenuPermitted.sql" />
+    <Build Include="Schemas\Accounting.sql" />
+    <Build Include="Schemas\CRM.sql" />
+    <Build Include="Schemas\HR.sql" />
+    <Build Include="Schemas\WareHouse.sql" />
+    <Build Include="Accounting\Functions\SFnCurrencyBuyAzn.sql" />
+    <Build Include="Accounting\Functions\SFnCurrencySellAzn.sql" />
+    <Build Include="Accounting\Procedures\spAccount.sql" />
+    <Build Include="Accounting\Procedures\spBankGroup.sql" />
+    <Build Include="Accounting\Procedures\spCurrencyAuto.sql" />
+    <Build Include="Accounting\Procedures\spGoodType.sql" />
+    <Build Include="Accounting\Tables\Account.sql" />
+    <Build Include="Accounting\Tables\Bank.sql" />
+    <Build Include="Accounting\Tables\BankGroup.sql" />
+    <Build Include="Accounting\Tables\Company.sql" />
+    <Build Include="Accounting\Tables\Currency.sql" />
+    <Build Include="Accounting\Tables\CurrencyHistory.sql" />
+    <Build Include="Accounting\Tables\Good.sql" />
+    <Build Include="Accounting\Tables\GoodType.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UdttCurrency.sql" />
+    <Build Include="Accounting\Views\VwAccount.sql" />
+    <Build Include="Accounting\Views\VwAccountChoose.sql" />
+    <Build Include="Accounting\Views\VwBank.sql" />
+    <Build Include="Accounting\Views\VwBankChoose.sql" />
+    <Build Include="Accounting\Views\VwBankGroup.sql" />
+    <Build Include="Accounting\Views\VwBankGroupChoose.sql" />
+    <Build Include="Accounting\Views\VwCompany.sql" />
+    <Build Include="Accounting\Views\VwCurrency.sql" />
+    <Build Include="Accounting\Views\VwCurrencyChoose.sql" />
+    <Build Include="Accounting\Views\VwGood.sql" />
+    <Build Include="Accounting\Views\VwGoodType.sql" />
+    <Build Include="Accounting\Views\VwGoodTypeChoose.sql" />
+    <Build Include="dbo\Procedures\spCitizenship.sql" />
+    <Build Include="dbo\Procedures\spHolidayType.sql" />
+    <Build Include="dbo\Procedures\spPosition.sql" />
+    <Build Include="dbo\Procedures\spRegion.sql" />
+    <Build Include="dbo\Procedures\spRegionType.sql" />
+    <Build Include="dbo\Procedures\spUnit.sql" />
+    <Build Include="dbo\Procedures\spUser.sql" />
+    <Build Include="dbo\Procedures\spWorkGraphic.sql" />
+    <Build Include="dbo\Procedures\spWorkPlace.sql" />
+    <Build Include="dbo\Procedures\spWorkType.sql" />
+    <Build Include="dbo\Tables\Citizenship.sql" />
+    <Build Include="dbo\Tables\Company.sql" />
+    <Build Include="dbo\Tables\ContactType.sql" />
+    <Build Include="dbo\Tables\ContractStatus.sql" />
+    <Build Include="dbo\Tables\Country.sql" />
+    <Build Include="dbo\Tables\Department.sql" />
+    <Build Include="dbo\Tables\District.sql" />
+    <Build Include="dbo\Tables\DocCert.sql" />
+    <Build Include="dbo\Tables\DocSeries.sql" />
+    <Build Include="dbo\Tables\DocType.sql" />
+    <Build Include="dbo\Tables\EducationInstitute.sql" />
+    <Build Include="dbo\Tables\EducationLevel.sql" />
+    <Build Include="dbo\Tables\EducationType.sql" />
+    <Build Include="dbo\Tables\Gender.sql" />
+    <Build Include="dbo\Tables\KnowledgeLevel.sql" />
+    <Build Include="dbo\Tables\Language.sql" />
+    <Build Include="dbo\Tables\MartialStatus.sql" />
+    <Build Include="dbo\Tables\MenuUserAccess.sql" />
+    <Build Include="dbo\Tables\MilitaryStatus.sql" />
+    <Build Include="dbo\Tables\Plugin.sql" />
+    <Build Include="dbo\Tables\Position.sql" />
+    <Build Include="dbo\Tables\Region.sql" />
+    <Build Include="dbo\Tables\RegionType.sql" />
+    <Build Include="dbo\Tables\Unit.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\WorkGraphic.sql" />
+    <Build Include="dbo\Tables\WorkPlace.sql" />
+    <Build Include="dbo\Tables\WorkType.sql" />
+    <Build Include="dbo\Views\VwCitizenship.sql" />
+    <Build Include="dbo\Views\VwContactType.sql" />
+    <Build Include="dbo\Views\VwContactTypeChoose.sql" />
+    <Build Include="dbo\Views\VwDepartment.sql" />
+    <Build Include="dbo\Views\VwDepartmentChoose.sql" />
+    <Build Include="dbo\Views\VwDocCert.sql" />
+    <Build Include="dbo\Views\VwDocCertChoose.sql" />
+    <Build Include="dbo\Views\VwDocSeries.sql" />
+    <Build Include="dbo\Views\VwDocSeriesChoose.sql" />
+    <Build Include="dbo\Views\VwDocType.sql" />
+    <Build Include="dbo\Views\VwDocTypeChoose.sql" />
+    <Build Include="dbo\Views\VwEducationLevel.sql" />
+    <Build Include="dbo\Views\VwGender.sql" />
+    <Build Include="dbo\Views\VwMartialStatus.sql" />
+    <Build Include="dbo\Views\VwMilitaryStatus.sql" />
+    <Build Include="dbo\Views\VwPosition.sql" />
+    <Build Include="dbo\Views\VwPositionChoose.sql" />
+    <Build Include="dbo\Views\VwRegion.sql" />
+    <Build Include="dbo\Views\VwRegionChoose.sql" />
+    <Build Include="dbo\Views\VwRegionType.sql" />
+    <Build Include="dbo\Views\VwRegionTypeChoose.sql" />
+    <Build Include="dbo\Views\VwUnit.sql" />
+    <Build Include="dbo\Views\VwUnitChoose.sql" />
+    <Build Include="dbo\Views\VwWorkGraphic.sql" />
+    <Build Include="dbo\Views\VwWorkGraphicChoose.sql" />
+    <Build Include="dbo\Views\VwWorkPlace.sql" />
+    <Build Include="dbo\Views\VwWorkType.sql" />
+    <Build Include="WareHouse\Tables\WareHouseType.sql" />
+    <Build Include="WareHouse\Tables\WareHouse.sql" />
+    <Build Include="WareHouse\Views\VwWareHouse.sql" />
+    <Build Include="WareHouse\Views\VwWareHouseChoose.sql" />
+    <Build Include="WareHouse\Procedures\spWareHouse.sql" />
+    <Build Include="dbo\Tables\OperationType.sql" />
+    <Build Include="dbo\Tables\City.sql" />
+    <Build Include="dbo\Tables\Dose.sql" />
+    <Build Include="dbo\Views\VwDose.sql" />
+    <Build Include="dbo\Procedures\spDose.sql" />
+    <Build Include="dbo\Tables\PackingType.sql" />
+    <Build Include="dbo\Views\VwPackingType.sql" />
+    <Build Include="dbo\Procedures\spPackingType.sql" />
+    <Build Include="Accounting\Tables\ContractType.sql" />
+    <Build Include="Accounting\Views\VwContractType.sql" />
+    <Build Include="Accounting\Procedures\spContractType.sql" />
+    <Build Include="Accounting\Tables\Customer.sql" />
+    <Build Include="Accounting\Tables\Contract.sql" />
+    <Build Include="Accounting\Tables\Docment.sql" />
+    <Build Include="WareHouse\Procedures\spWareHouseType.sql" />
+    <Build Include="WareHouse\Views\VwWareHouseType.sql" />
+    <Build Include="Accounting\Functions\IFnIncludeGood.sql" />
+    <Build Include="Accounting\Tables\DocumentDetail.sql" />
+    <Build Include="Accounting\Views\VwDocumentDetail.sql" />
+    <Build Include="Accounting\Views\VwIncludeContractChoose.sql" />
+    <Build Include="Accounting\Views\VwContract.sql" />
+    <Build Include="Accounting\Views\VwCustomer.sql" />
+    <Build Include="Accounting\Views\VwDocument.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtIncludeGood.sql" />
+    <Build Include="Accounting\Procedures\spDocument.sql" />
+    <Build Include="Accounting\Procedures\spCustomerContract.sql" />
+    <Build Include="Accounting\Functions\IFnContractCustomer.sql" />
+    <Build Include="Accounting\Views\VwSaleContractChoose.sql" />
+    <Build Include="Accounting\Tables\PaymentType.sql" />
+    <Build Include="Accounting\Views\VwPaymentType.sql" />
+    <Build Include="Accounting\Functions\SFnAccountIdByCode.sql" />
+    <Build Include="Accounting\Tables\Barcode.sql" />
+    <Build Include="Accounting\Views\VwBarcode.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtBarcodeGood.sql" />
+    <Build Include="Accounting\Functions\IFnBarcodeGood.sql" />
+    <Build Include="Accounting\Procedures\spGood.sql" />
+    <Build Include="Accounting\Tables\Stock.sql" />
+    <Build Include="Accounting\Views\VwStock.sql" />
+    <Build Include="Accounting\Views\VwGoodStock.sql" />
+    <Build Include="Accounting\Procedures\spDocumentSale.sql" />
+    <Build Include="Accounting\Functions\SFnGetGoodPriceWholeSale.sql" />
+    <Build Include="Accounting\Functions\IFnPricesByGoodId.sql" />
+    <Build Include="dbo\Tables\UserRegistration.sql" />
+    <Build Include="dbo\Views\VwUserRegistration.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtRetailSale.sql" />
+    <Build Include="Accounting\Views\VwRetailSale.sql" />
+    <Build Include="Accounting\Functions\SFnGetGoodPriceRetailSale.sql" />
+    <Build Include="Accounting\Views\VwCompanyGoodChoose.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtIncludeReturn.sql" />
+    <Build Include="Accounting\Views\VwCustomerGoodReturn.sql" />
+    <Build Include="Accounting\Procedures\spGetGood.sql" />
+    <Build Include="Accounting\Procedures\spDocumentRetail.sql" />
+    <Build Include="Accounting\Tables\RetailSale.sql" />
+    <Build Include="Accounting\Tables\PaymentOrder.sql" />
+    <Build Include="Accounting\Tables\AccountSummary.sql" />
+    <Build Include="Accounting\Tables\AccountSummaryHistory.sql" />
+    <Build Include="Accounting\Tables\DocumentDetailTmp.sql" />
+    <Build Include="Accounting\Views\VwDocumentDetailTmp.sql" />
+    <Build Include="Accounting\Procedures\spDocumentRetailTmp.sql" />
+    <Build Include="Accounting\Tables\RetailSaleTmp.sql" />
+    <Build Include="Accounting\Tables\DocmentTmp.sql" />
+    <Build Include="Accounting\Procedures\spDocumentRetailDeleteTmp.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtRetailSaleTmp.sql" />
+    <Build Include="dbo\Views\VwUser.sql" />
+    <Build Include="dbo\Tables\RoleType.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="dbo\Views\VwRoleTypeChoose.sql" />
+    <Build Include="dbo\Views\VwRoleType.sql" />
+    <Build Include="dbo\Views\VwRole.sql" />
+    <Build Include="Accounting\Views\VwDocumentTmp.sql" />
+    <Build Include="dbo\Procedures\spUser1.sql" />
+    <Build Include="Accounting\Functions\SFnNewSaleNo.sql" />
+    <Build Include="Accounting\Procedures\spRetailAddTmps.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtDeleteGood.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtSaleGood.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtSaleGoodReturn.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UdttCustomerContract.sql" />
+    <Build Include="Accounting\Functions\IFnSaleGood.sql" />
+    <Build Include="Accounting\Views\VwCompanyMain.sql" />
+    <Build Include="Accounting\Views\VwDocumentReturnInclude.sql" />
+    <Build Include="Accounting\Views\VwDocumentReturnSale.sql" />
+    <Build Include="Accounting\Procedures\spDocumentSaleReturn.sql" />
+    <Build Include="Accounting\Functions\IFnReturnSaleGood.sql" />
+    <Build Include="Accounting\Functions\IFnReturnRetailSaleGood.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtRetailSaleGoodReturn.sql" />
+    <Build Include="Accounting\Views\VwDocumentReturnRetail.sql" />
+    <Build Include="Accounting\Procedures\spDocumentDeletion.sql" />
+    <Build Include="Accounting\Functions\IFnDeleteGood.sql" />
+    <Build Include="Accounting\Views\VwDocumentDeletion.sql" />
+    <Build Include="Accounting\Functions\SFnGetGoodPriceBuy.sql" />
+    <Build Include="Accounting\Views\VwTotalReport.sql" />
+    <Build Include="Accounting\Tables\TotalReport.sql" />
+    <Build Include="Accounting\Procedures\spReportMoney4.sql" />
+    <Build Include="Accounting\Views\VwDeficitGoodStock.sql" />
+    <Build Include="Accounting\Procedures\spIncludeOrder.sql" />
+    <Build Include="Accounting\Views\VwRetailContractChoose.sql" />
+    <Build Include="Accounting\Procedures\spDocumentRetailReturn.sql" />
+    <Build Include="Accounting\Functions\IFnDocumentDetailReport.sql" />
+    <Build Include="Accounting\Tables\Reason.sql" />
+    <Build Include="Accounting\Views\VwReason.sql" />
+    <Build Include="Accounting\Procedures\spReason.sql" />
+    <Build Include="Accounting\Procedures\spDocumentReturnInclude.sql" />
+    <Build Include="Accounting\Tables\Payment.sql" />
+    <Build Include="Accounting\Views\VwPayment.sql" />
+    <Build Include="Accounting\Procedures\spDebt.sql" />
+    <Build Include="Accounting\Procedures\spPaymentDebt.sql" />
+    <Build Include="Accounting\Tables\CustomerDebt.sql" />
+    <Build Include="Accounting\Views\VwCustomerDebt.sql" />
+    <Build Include="Accounting\Procedures\spCustomerDebt.sql" />
+    <Build Include="Accounting\Tables\PaymentRetail.sql" />
+    <Build Include="Accounting\Views\VwAccountDebt.sql" />
+    <Build Include="Accounting\Procedures\spDeficitStock.sql" />
+    <Build Include="Accounting\Procedures\spPayment.sql" />
+    <Build Include="Accounting\Tables\LastPrice.sql" />
+    <Build Include="Accounting\Views\VwLastPrice.sql" />
+    <Build Include="Accounting\Procedures\spChangePrice.sql" />
+    <Build Include="Accounting\Views\VwPaymentRetail.sql" />
+    <Build Include="sys\Procedure\spUserPermissions.sql" />
+    <Build Include="sys\UserDefinedTableType\UddtSetPermissions.sql" />
+    <Build Include="sys\Procedure\spSetPermissions.sql" />
+    <Build Include="Accounting\Tables\InventarGood.sql" />
+    <Build Include="Accounting\Procedures\spGetInventarGood.sql" />
+    <Build Include="Accounting\Views\VwRetailPrint.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtInventor.sql" />
+    <Build Include="sys\Functions\fnGetAccess.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtChangePrice.sql" />
+    <Build Include="Accounting\Views\VwRetailSaleContractChoose.sql" />
+    <Build Include="Accounting\Procedures\spDocumentRetailsSale.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtRetailsSaleGood.sql" />
+    <Build Include="Accounting\Functions\IFnRetailsSaleGood.sql" />
+    <Build Include="Accounting\Views\VwDocumentRetailsSale.sql" />
+    <Build Include="Accounting\Views\VwGoodSelect.sql" />
+    <Build Include="Accounting\Views\VwBarcodeSelect.sql" />
+    <Build Include="Accounting\Tables\BarcodeGenerate.sql" />
+    <Build Include="Accounting\Procedures\spBarcodeGenerate.sql" />
+    <Build Include="Schemas\Service.sql" />
+    <Build Include="Accounting\Tables\Inventar.sql" />
+    <Build Include="Accounting\Procedures\spInventar.sql" />
+    <Build Include="Accounting\Views\VwInventar.sql" />
+    <Build Include="Accounting\Procedures\spGetGoodStock.sql" />
+    <Build Include="Accounting\Tables\WarehouseMenuCollection.sql" />
+    <Build Include="Accounting\Procedures\spWareHousePermitted.sql" />
+    <Build Include="Accounting\Procedures\spWareHouseSelect.sql" />
+    <Build Include="Accounting\Procedures\spSetWareHousePermissions.sql" />
+    <Build Include="Accounting\Procedures\spBarcodeSelect.sql" />
+    <Build Include="Accounting\Tables\DocumentInventar.sql" />
+    <Build Include="Accounting\Procedures\spDocumentInventarSelect.sql" />
+    <Build Include="Accounting\Tables\Transport.sql" />
+    <Build Include="Accounting\Procedures\spTransport.sql" />
+    <Build Include="Accounting\Tables\CompanyType.sql" />
+    <Build Include="Accounting\Procedures\spWareHouseChangedPrice.sql" />
+    <Build Include="Accounting\Tables\Cost.sql" />
+    <Build Include="Accounting\Views\VwCost.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtLogisticDetail.sql" />
+    <Build Include="Accounting\Functions\IFnLogisticDetail.sql" />
+    <Build Include="Accounting\Procedures\spLogisticDocument.sql" />
+    <Build Include="Accounting\Procedures\spCustomerCreditor.sql" />
+    <Build Include="Accounting\Procedures\spCustomerZero.sql" />
+    <Build Include="Accounting\Views\VwCustomerCreditor.sql" />
+    <Build Include="Accounting\Views\VwCustomerZero.sql" />
+    <Build Include="Accounting\Functions\IFnLogisticDetailReport.sql" />
+    <Build Include="Accounting\Tables\RetailReceipt.sql" />
+    <Build Include="Accounting\Views\VwRetailReceipt.sql" />
+    <Build Include="Accounting\Tables\ReceiptsSatatus.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtReceiptsRetail.sql" />
+    <Build Include="Accounting\Procedures\spRetailReceipts.sql" />
+    <Build Include="Accounting\Views\VwRetailReceiptHistory.sql" />
+    <Build Include="Accounting\Procedures\spRetailPrint.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UdttIds.sql" />
+    <Build Include="Accounting\Tables\ImagesGood.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UdttImagesGood.sql" />
+    <Build Include="Accounting\Functions\IFnImagesGood.sql" />
+    <Build Include="dbo\Tables\SubUnit.sql" />
+    <Build Include="dbo\Views\VwSubUnit.sql" />
+    <Build Include="Accounting\Views\VwInventarGood.sql" />
+    <Build Include="WareHouse\Service\Tables\ObjectDetail.sql" />
+    <Build Include="Accounting\Tables\Logistic.sql" />
+    <Build Include="Accounting\Tables\LogisticDetail.sql" />
+    <Build Include="Accounting\Views\VwLogistic.sql" />
+    <Build Include="Accounting\Views\VwLogisticDetail.sql" />
+    <Build Include="Accounting\Tables\OfflineSale.sql" />
+    <Build Include="Accounting\Tables\OfflineSaleDetail.sql" />
+    <Build Include="Accounting\Views\VwOfflineSale.sql" />
+    <Build Include="Accounting\Views\VwOfflineSaleDetail.sql" />
+    <Build Include="Accounting\Functions\IFnOfflineSaleDetail.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtOfflineSaleDetail.sql" />
+    <Build Include="Accounting\Procedures\spOfflineSaleDocument.sql" />
+    <Build Include="Accounting\Views\VwGoodStockSelect.sql" />
+    <Build Include="Accounting\Tables\Cash.sql" />
+    <Build Include="Accounting\Views\VwGoodStockSelectReturn.sql" />
+    <Build Include="Accounting\Tables\Expense.sql" />
+    <Build Include="Accounting\Views\VwCash.sql" />
+    <Build Include="Accounting\Views\VwExpense.sql" />
+    <Build Include="Accounting\Procedures\spCash.sql" />
+    <Build Include="Accounting\Procedures\spExpense.sql" />
+    <Build Include="Accounting\Views\VwExpenseChoose.sql" />
+    <Build Include="Accounting\Tables\CashMoney.sql" />
+    <Build Include="Accounting\Views\VwCashMoney.sql" />
+    <Build Include="Accounting\Tables\CashMenuCollection.sql" />
+    <Build Include="Accounting\Procedures\spCashTransport.sql" />
+    <Build Include="Accounting\Procedures\spSetCashPermissions.sql" />
+    <Build Include="sys\UserDefinedTableType\UddtCashPermission.sql" />
+    <Build Include="Accounting\Procedures\spCashPermitted.sql" />
+    <Build Include="Accounting\Procedures\spCashFromMoney.sql" />
+    <Build Include="Accounting\Procedures\spCashToMoney.sql" />
+    <Build Include="Accounting\Views\VwPaymentTransfer.sql" />
+    <Build Include="Accounting\Views\VwPaymentIncludeOrder.sql" />
+    <Build Include="Accounting\Views\VwIncludeReport.sql" />
+    <Build Include="Accounting\Views\VwWholeSaleReport.sql" />
+    <Build Include="Accounting\Procedures\spIncludeReport.sql" />
+    <Build Include="Accounting\Procedures\spIncludeDocReport.sql" />
+    <Build Include="Accounting\Tables\Cashier.sql" />
+    <Build Include="Accounting\Procedures\spManagementPaymentDebt.sql" />
+    <Build Include="Accounting\Views\VwManagementPayment.sql" />
+    <Build Include="Accounting\Views\VwGoodAction.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Init.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="MHM.Accountancy.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Accounting\UserDefinedTableType\UddtContractCustomer.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="sys\UserDefinedTableType\UddtWareHousePermission.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Accounting\Functions\IFnInventarGood.sql" />
+    <Build Include="Accounting\UserDefinedTableType\UddtTransport.sql" />
+  </ItemGroup>
+</Project>

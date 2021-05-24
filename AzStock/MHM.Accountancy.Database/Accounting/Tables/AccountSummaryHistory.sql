@@ -1,0 +1,28 @@
+﻿CREATE TABLE [Accounting].[AccountSummaryHistory]
+(
+	[Id] int NOT NULL identity,
+	[EntityId] int,
+	[EntityTypeId] int,
+	[AccountCode] varchar(40),
+	[Balance] decimal(26,6),
+	[Current] decimal(26,6),
+	[DayCount] int null,
+	[DailyValue]decimal (26,6) null,
+	[Dt] decimal(26,6) null,
+	[Kt] decimal(26,6) null,
+	[SalaryDate] date null,
+	[CreateId] int not null,
+	[CreateDate] DATETIME NULL DEFAULT getdate(), 
+	[UpdateId] int null,
+	[UpdateDate] DATETIME ,
+	[DeleteId] int null,
+	[DeleteDate] DATETIME,
+	[LockId] int null,
+	[LockDate] DATETIME ,
+	[ReadOnly] DATETIME,
+	[DocTypeId] INT NULL,
+	[DocCertId] int null,
+	[DocSeriesId] int null,
+	[RowCreated] datetime DEFAULT getdate() NOT NULL,
+	CONSTRAINT PkAccountSummaryHistoryId primary key(Id)
+)

@@ -1,0 +1,31 @@
+﻿CREATE TABLE [Accounting].[PaymentOrder]
+(
+	[Id] INT NOT NULL IDENTITY,
+	[Number] INT NOT NULL, 
+	[DocumentDate] DATETIME NOT NULL,
+    [EmitentId] int NOT NULL,
+	[BenefisiarId] int NOT NULL,
+	[PayerId] int NOT NULL,
+	[PayeeId] int NOT NULL,
+	[OperationCurrencyId] int,
+	[OperationAmount] decimal(26,6) NOT NULL,
+	[AmountAZN] decimal(26,6) NOT NULL,
+	[Classification] nvarchar(300),
+	[Description] nvarchar(500),
+	[BudgetCode] nvarchar(60),
+	[BudgetLevelCode] nvarchar(60),
+	[AccountId] int null,
+    [CreateId] int not null,
+	[CreateDate] DATETIME NOT NULL DEFAULT getdate(), 
+	[UpdateId] int null,
+	[UpdateDate] DATETIME ,
+	[DeleteId] int null,
+	[DeleteDate] DATETIME,
+	[LockId] int null,
+	[LockDate] DATETIME ,
+	[ReadOnly] DATETIME,
+	[DocTypeId] INT NULL,
+	[DocCertId] int null,
+	[DocSeriesId] int null
+    CONSTRAINT PKPaymentOrder PRIMARY KEY (Id)
+)

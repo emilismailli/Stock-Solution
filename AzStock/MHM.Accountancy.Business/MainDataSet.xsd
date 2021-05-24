@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MainDataSet" targetNamespace="http://tempuri.org/MainDataSet.xsd" xmlns:mstns="http://tempuri.org/MainDataSet.xsd" xmlns="http://tempuri.org/MainDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MainDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MainDataSet" msprop:Generator_UserDSName="MainDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="IfnUserPermission" msprop:Generator_TableClassName="IfnUserPermissionDataTable" msprop:Generator_TableVarName="tableIfnUserPermission" msprop:Generator_RowChangedName="IfnUserPermissionRowChanged" msprop:Generator_TablePropName="IfnUserPermission" msprop:Generator_RowDeletingName="IfnUserPermissionRowDeleting" msprop:Generator_RowChangingName="IfnUserPermissionRowChanging" msprop:Generator_RowEvHandlerName="IfnUserPermissionRowChangeEventHandler" msprop:Generator_RowDeletedName="IfnUserPermissionRowDeleted" msprop:Generator_RowClassName="IfnUserPermissionRow" msprop:Generator_UserTableName="IfnUserPermission" msprop:Generator_RowEvArgName="IfnUserPermissionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Show" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShow" msprop:Generator_ColumnPropNameInRow="Show" msprop:Generator_ColumnPropNameInTable="ShowColumn" msprop:Generator_UserColumnName="Show" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Create" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCreate" msprop:Generator_ColumnPropNameInRow="Create" msprop:Generator_ColumnPropNameInTable="CreateColumn" msprop:Generator_UserColumnName="Create" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Update" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUpdate" msprop:Generator_ColumnPropNameInRow="Update" msprop:Generator_ColumnPropNameInTable="UpdateColumn" msprop:Generator_UserColumnName="Update" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Delete" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDelete" msprop:Generator_ColumnPropNameInRow="Delete" msprop:Generator_ColumnPropNameInTable="DeleteColumn" msprop:Generator_UserColumnName="Delete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ApplyDocument" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApplyDocument" msprop:Generator_ColumnPropNameInRow="ApplyDocument" msprop:Generator_ColumnPropNameInTable="ApplyDocumentColumn" msprop:Generator_UserColumnName="ApplyDocument" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AllowInContainer" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAllowInContainer" msprop:Generator_ColumnPropNameInRow="AllowInContainer" msprop:Generator_ColumnPropNameInTable="AllowInContainerColumn" msprop:Generator_UserColumnName="AllowInContainer" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

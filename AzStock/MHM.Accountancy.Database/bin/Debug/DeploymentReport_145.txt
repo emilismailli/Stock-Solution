@@ -1,0 +1,192 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [Accounting].[Payment].[UpdateDate] is being dropped, data loss could occur.
+       The column [Accounting].[Payment].[UpdateId] is being dropped, data loss could occur.
+
+** User actions
+     Drop
+       [Accounting].[DF__tmp_ms_xx__Creat__2A0C1F93] (Default Constraint)
+       [Accounting].[DF__tmp_ms_xx__Inclu__2917FB5A] (Default Constraint)
+     Alter
+       [Accounting].[Payment] (Table)
+       [Accounting].[VwBank] (View)
+       [Accounting].[VwBankChoose] (View)
+       [Accounting].[VwBankGroup] (View)
+       [Accounting].[VwBankGroupChoose] (View)
+       [Accounting].[VwCurrency] (View)
+       [Accounting].[VwCurrencyChoose] (View)
+       [Accounting].[VwGoodType] (View)
+       [Accounting].[VwGoodTypeChoose] (View)
+       [Accounting].[VwReason] (View)
+       [dbo].[VwDepartment] (View)
+       [dbo].[VwDepartmentChoose] (View)
+       [dbo].[VwDocCert] (View)
+       [dbo].[VwDocCertChoose] (View)
+       [dbo].[VwDocSeries] (View)
+       [dbo].[VwDocSeriesChoose] (View)
+       [dbo].[VwDocType] (View)
+       [dbo].[VwDocTypeChoose] (View)
+       [dbo].[VwPosition] (View)
+       [dbo].[VwPositionChoose] (View)
+       [dbo].[VwUnitChoose] (View)
+       [dbo].[VwWorkGraphic] (View)
+       [dbo].[VwWorkGraphicChoose] (View)
+       [WareHouses].[VwWareHouse] (View)
+       [WareHouses].[VwWareHouseChoose] (View)
+       [WareHouses].[VwWareHouseType] (View)
+       [Accounting].[VwDocument] (View)
+       [Accounting].[spDocument] (Procedure)
+       [Accounting].[spDocumentRetailReturn] (Procedure)
+       [Accounting].[spDocumentSale] (Procedure)
+       [dbo].[spTransport] (Procedure)
+       [Accounting].[spAccount] (Procedure)
+       [Accounting].[spBankGroup] (Procedure)
+       [Accounting].[spCash] (Procedure)
+       [Accounting].[spContractType] (Procedure)
+       [Accounting].[spCustomerContract] (Procedure)
+       [Accounting].[spExpense] (Procedure)
+       [Accounting].[spGood] (Procedure)
+       [Accounting].[spGoodType] (Procedure)
+       [Accounting].[spLogisticDocument] (Procedure)
+       [Accounting].[spOfflineSaleDocument] (Procedure)
+       [Accounting].[spReason] (Procedure)
+       [dbo].[spCitizenship] (Procedure)
+       [dbo].[spDose] (Procedure)
+       [dbo].[spHolidayType] (Procedure)
+       [dbo].[spPackingType] (Procedure)
+       [dbo].[spPosition] (Procedure)
+       [dbo].[spRegion] (Procedure)
+       [dbo].[spRegionType] (Procedure)
+       [dbo].[spUnit] (Procedure)
+       [dbo].[spUser1] (Procedure)
+       [dbo].[spWorkGraphic] (Procedure)
+       [dbo].[spWorkPlace] (Procedure)
+       [dbo].[spWorkType] (Procedure)
+       [WareHouses].[spWareHouse] (Procedure)
+       [WareHouses].[spWareHouseType] (Procedure)
+     Create
+       Default Constraint: unnamed constraint on [Accounting].[Document] (Default Constraint)
+       Default Constraint: unnamed constraint on [Accounting].[Document] (Default Constraint)
+
+** Supporting actions
+     Refresh
+       [Accounting].[VwInventar] (View)
+       [Accounting].[VwCompany] (View)
+       [Accounting].[VwCompanyMain] (View)
+       [Accounting].[VwCustomer] (View)
+       [Accounting].[VwCash] (View)
+       [Accounting].[VwContract] (View)
+       [Accounting].[VwDocumentDeletion] (View)
+       [Accounting].[VwDocumentRetailsSale] (View)
+       [Accounting].[VwDocumentReturnInclude] (View)
+       [Accounting].[VwDocumentReturnRetail] (View)
+       [Accounting].[VwDocumentReturnSale] (View)
+       [Accounting].[VwDocumentTmp] (View)
+       [Accounting].[VwGood] (View)
+       [Accounting].[VwGoodSelect] (View)
+       [Accounting].[VwLogistic] (View)
+       [Accounting].[VwOfflineSale] (View)
+       [Accounting].[VwDeficitGoodStock] (View)
+       [Accounting].[VwGoodStock] (View)
+       [Accounting].[VwGoodStockSelect] (View)
+       [Accounting].[VwGoodStockSelectReturn] (View)
+       [Accounting].[VwBarcode] (View)
+       [Accounting].[VwBarcodeSelect] (View)
+       [Accounting].[VwDocumentDetailTmp] (View)
+       [Accounting].[VwLogisticDetail] (View)
+       [Accounting].[VwOfflineSaleDetail] (View)
+       [Accounting].[VwRetailReceipt] (View)
+       [Accounting].[VwRetailReceiptHistory] (View)
+       [Accounting].[VwCashMoney] (View)
+       [Accounting].[VwDocumentDetail] (View)
+       [Accounting].[VwPayment] (View)
+       [Accounting].[VwPaymentIncludeOrder] (View)
+       [Accounting].[VwPaymentTransfer] (View)
+       [Accounting].[VwIncludeReport] (View)
+       [Accounting].[VwLastPrice] (View)
+       [Accounting].[VwRetailPrint] (View)
+       [Accounting].[VwRetailSale] (View)
+       [Accounting].[VwWholeSaleReport] (View)
+       [Accounting].[IFnDeleteGood] (Function)
+       [Accounting].[IFnIncludeGood] (Function)
+       [Accounting].[IFnRetailsSaleGood] (Function)
+       [Accounting].[IFnReturnRetailSaleGood] (Function)
+       [Accounting].[IFnReturnSaleGood] (Function)
+       [Accounting].[IFnSaleGood] (Function)
+       [Accounting].[IFnDocumentDetailReport] (Function)
+       [Accounting].[IFnLogisticDetailReport] (Function)
+       [Accounting].[spCashTrasnport] (Procedure)
+       [Accounting].[spDebt] (Procedure)
+       [Accounting].[spDocumentRetailsSale] (Procedure)
+       [Accounting].[spDocumentReturnInclude] (Procedure)
+       [Accounting].[spDocumentSaleReturn] (Procedure)
+       [Accounting].[spIncludeOrder] (Procedure)
+       [Accounting].[spPaymentDebt] (Procedure)
+       [Accounting].[spDocumentDeletion] (Procedure)
+       [Accounting].[spRetailPrint] (Procedure)
+       [dbo].[spReportMoney4] (Procedure)
+       [Accounting].[spCustomerCerditor] (Procedure)
+       [Accounting].[spCustomerDebt] (Procedure)
+       [Accounting].[spCustomerZero] (Procedure)
+       [Accounting].[spPayment] (Procedure)
+       [Accounting].[spIncludeReport] (Procedure)
+       [Accounting].[spDocumentRetailTmp] (Procedure)
+       [dbo].[spGetGood] (Procedure)
+       [dbo].[spGetInvetnarGood] (Procedure)
+       [Accounting].[spDeficitStock] (Procedure)
+       [Accounting].[spDocumentRetail] (Procedure)
+       [dbo].[spBarcodeSelect] (Procedure)
+       [dbo].[spGetGoodStock] (Procedure)
+       [Accounting].[spInventar] (Procedure)
+
+The column [Accounting].[Payment].[UpdateDate] is being dropped, data loss could occur.
+The column [Accounting].[Payment].[UpdateId] is being dropped, data loss could occur.
+If this deployment is executed, changes to [Accounting].[Payment] might introduce run-time errors in [Accounting].[spDebt2].
+If this deployment is executed, changes to [WareHouses].[VwWareHouse] might introduce run-time errors in [Accounting].[VwDocumentInventar].
+If this deployment is executed, changes to [WareHouses].[VwWareHouse] might introduce run-time errors in [Accounting].[VwDocumentReturnRetailSale].
+If this deployment is executed, changes to [WareHouses].[VwWareHouse] might introduce run-time errors in [Accounting].[VwTrancference].
+If this deployment is executed, changes to [Accounting].[VwCompany] might introduce run-time errors in [Accounting].[spCompanies].
+If this deployment is executed, changes to [Accounting].[VwCompany] might introduce run-time errors in [Accounting].[spGetInventarGood].
+If this deployment is executed, changes to [Accounting].[VwCompany] might introduce run-time errors in [Accounting].[VwDocumentInventar].
+If this deployment is executed, changes to [Accounting].[VwCompany] might introduce run-time errors in [Accounting].[VwDocumentReturnRetailSale].
+If this deployment is executed, changes to [Accounting].[VwCompany] might introduce run-time errors in [dbo].[spGetInventar].
+If this deployment is executed, changes to [Accounting].[VwContract] might introduce run-time errors in [Accounting].[spDocumentRetailSaleReturn].
+If this deployment is executed, changes to [Accounting].[VwContract] might introduce run-time errors in [Accounting].[VwDocumentReturnRetailSale].
+If this deployment is executed, changes to [Accounting].[VwContract] might introduce run-time errors in [Accounting].[VwOffline].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [Accounting].[spDebt2].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [Accounting].[spDocumentInventar].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [Accounting].[spGetMoneyCirculation].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [Accounting].[spReportMoney].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [Accounting].[VwGoodStockSelectRetuurn].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [Accounting].[VwInventarGood].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [Accounting].[VwInventor].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [dbo].[spGetMoneyCirculation].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [dbo].[spReportMoney6].
+If this deployment is executed, changes to [Accounting].[VwDocument] might introduce run-time errors in [dbo].[spReportMoney7].
+If this deployment is executed, changes to [Accounting].[VwGood] might introduce run-time errors in [Accounting].[VwDocumentDetailInventar].
+If this deployment is executed, changes to [Accounting].[VwGood] might introduce run-time errors in [Accounting].[VwOfflineDetail].
+If this deployment is executed, changes to [Accounting].[VwGoodSelect] might introduce run-time errors in [Accounting].[VwGoodStockSelectRetuurn].
+If this deployment is executed, changes to [Accounting].[VwLogistic] might introduce run-time errors in [Accounting].[spOfflineDocument].
+If this deployment is executed, changes to [Accounting].[VwDeficitGoodStock] might introduce run-time errors in [Accounting].[spLowQuantity].
+If this deployment is executed, changes to [Accounting].[VwDeficitGoodStock] might introduce run-time errors in [Accounting].[VwLowQuantity].
+If this deployment is executed, changes to [Accounting].[VwDeficitGoodStock] might introduce run-time errors in [dbo].[spLowQuantity].
+If this deployment is executed, changes to [Accounting].[VwGoodStock] might introduce run-time errors in [Accounting].[spDocumentInventar].
+If this deployment is executed, changes to [Accounting].[VwGoodStock] might introduce run-time errors in [Accounting].[VwInventarGood].
+If this deployment is executed, changes to [Accounting].[VwGoodStock] might introduce run-time errors in [Accounting].[VwInventor].
+If this deployment is executed, changes to [Accounting].[VwGoodStock] might introduce run-time errors in [dbo].[spGetInventar].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [Accounting].[IFnTranference].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [Accounting].[spDebt2].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [Accounting].[spGetMoneyCirculation].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [Accounting].[spReportMoney].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [dbo].[spGetMoneyCirculation].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [dbo].[spReportMoney6].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [dbo].[spReportMoney7].
+If this deployment is executed, changes to [Accounting].[VwDocumentDetail] might introduce run-time errors in [dbo].[VwDeficitGoodStock].
+The project and target databases have different collation settings. Deployment errors might occur.
+

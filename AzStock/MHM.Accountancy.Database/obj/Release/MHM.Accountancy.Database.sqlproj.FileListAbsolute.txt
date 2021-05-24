@@ -1,0 +1,9 @@
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\bin\Release\MHM.Accountancy.Database.dacpac
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\bin\Release\MHM.Accountancy.Database.dll
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\bin\Release\MHM.Accountancy.Database.pdb
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\obj\Release\Model.xml
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\obj\Release\refactor.xml
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\obj\Release\postdeploy.sql
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\obj\Release\predeploy.sql
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\obj\Release\MHM.Accountancy.Database.dll
+C:\Users\emil.ismayilli\Desktop\AzStock\MHM.Accountancy.Database\obj\Release\MHM.Accountancy.Database.pdb

@@ -1,0 +1,33 @@
+﻿CREATE TABLE [Accounting].[Logistic]
+(
+		[Id] INT NOT NULL IDENTITY,
+		[Driver] nvarchar(200),
+		[Fin] nvarchar(200),
+		[CompanyId] int ,
+		[WareHouseId] int ,
+		
+	[ContractId] int null,
+	[PaymentTypeId] int null,
+		[Transportation] nvarchar(200),
+		[Cart] nvarchar(200),
+		[Sender] nvarchar(200),
+		[SenderAddress] nvarchar(200),
+		[SenderManager] nvarchar(200),
+		[Received] nvarchar(200),
+		[ReceivedAddress] nvarchar(200),
+		[ReceivedManager] nvarchar(200),
+		[Date] datetime ,
+		[DeliveryDate] datetime,
+		[Description] nvarchar(500),
+		[CreateId] int  null,
+	    [CreateDate] DATETIME  NULL DEFAULT getdate(), 
+	    [UpdateId] int null,
+	    [UpdateDate] DATETIME ,
+	    [DeleteId] int null,
+	    [DeleteDate] DATETIME,
+	    [ReadOnly] DATETIME,
+	    [DocTypeId] INT NULL,
+	    [DocCertId] int null,
+	    [DocSeriesId] int null,
+		CONSTRAINT PKLogistic PRIMARY KEY (Id)
+)

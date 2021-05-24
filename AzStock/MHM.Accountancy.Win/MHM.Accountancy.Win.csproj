@@ -1,0 +1,1595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA52C8FB-E621-4166-8583-F7609C1F5EB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MHM.Accountancy.Win</RootNamespace>
+    <AssemblyName>MHM Accountancy</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\somar-01.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Snap.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Snap.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Snap.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Tutorials.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ERP.Infrastructure">
+      <HintPath>..\MHM.Accountancy.Business\bin\Debug\ERP.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Json, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c6752e45808247c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\JSON.1.0.1\lib\net40\Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinCustom">
+      <HintPath>C:\Users\emil.ismayilli\Desktop\WinCustom.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayoutManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayoutManager.Designer.cs">
+      <DependentUpon>FormLayoutManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoToMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoToMenuForm.Designer.cs">
+      <DependentUpon>GoToMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LoadingPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\LoadingPageForm.Designer.cs">
+      <DependentUpon>LoadingPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Maintenance\MenuManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Maintenance\MenuManager.Designer.cs">
+      <DependentUpon>MenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Data\AccountingDataSet.cs">
+      <DependentUpon>AccountingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Data\AccountingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CashierManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CashierManager.Designer.cs">
+      <DependentUpon>CashierManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CashManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CashManager.Designer.cs">
+      <DependentUpon>CashManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ExpenseManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ExpenseManager.Designer.cs">
+      <DependentUpon>ExpenseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\AccountManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\AccountManager.Designer.cs">
+      <DependentUpon>AccountManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\BankGroupManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\BankGroupManager.Designer.cs">
+      <DependentUpon>BankGroupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\BankManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\BankManager.Designer.cs">
+      <DependentUpon>BankManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ChangePriceManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ChangePriceManager.Designer.cs">
+      <DependentUpon>ChangePriceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CompanyManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CompanyManager.Designer.cs">
+      <DependentUpon>CompanyManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ContractTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ContractTypeManager.Designer.cs">
+      <DependentUpon>ContractTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CurrencyManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CurrencyManager.Designer.cs">
+      <DependentUpon>CurrencyManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CashierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CashierForm.Designer.cs">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CashForm.Designer.cs">
+      <DependentUpon>CashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ExpenseForm.Designer.cs">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ManagementIncludeOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ManagementIncludeOrderForm.Designer.cs">
+      <DependentUpon>ManagementIncludeOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\TransferMoneyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\TransferMoneyForm.Designer.cs">
+      <DependentUpon>TransferMoneyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\GoodActionManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\GoodActionManager.Designer.cs">
+      <DependentUpon>GoodActionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ManagementIncludeOrderManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ManagementIncludeOrderManager.Designer.cs">
+      <DependentUpon>ManagementIncludeOrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\WholeSaleReportManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\WholeSaleReportManager.Designer.cs">
+      <DependentUpon>WholeSaleReportManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\IncludeReportManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\IncludeReportManager.Designer.cs">
+      <DependentUpon>IncludeReportManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\MenuCodesManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\MenuCodesManager.Designer.cs">
+      <DependentUpon>MenuCodesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\PriceViewManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\PriceViewManager.Designer.cs">
+      <DependentUpon>PriceViewManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ImageForm.Designer.cs">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\OfflineNewSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\OfflineNewSaleForm.Designer.cs">
+      <DependentUpon>OfflineNewSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\TransportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\TransportForm.designer.cs">
+      <DependentUpon>TransportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\OfflineNewSaleManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\OfflineNewSaleManager.Designer.cs">
+      <DependentUpon>OfflineNewSaleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\LogisticManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\LogisticManager.Designer.cs">
+      <DependentUpon>LogisticManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CustomerContractManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CustomerContractManager.Designer.cs">
+      <DependentUpon>CustomerContractManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CostReportManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CostReportManager.Designer.cs">
+      <DependentUpon>CostReportManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\DeficitStockManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\DeficitStockManager.Designer.cs">
+      <DependentUpon>DeficitStockManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\DeletionManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\DeletionManager.Designer.cs">
+      <DependentUpon>DeletionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\BankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\BankForm.Designer.cs">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\BankGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\BankGroupForm.Designer.cs">
+      <DependentUpon>BankGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ChangedPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ChangedPriceForm.Designer.cs">
+      <DependentUpon>ChangedPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ContractTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ContractTypeForm.Designer.cs">
+      <DependentUpon>ContractTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CurrencyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CurrencyForm.Designer.cs">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CustomerContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CustomerContractForm.Designer.cs">
+      <DependentUpon>CustomerContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\DeletionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\DeletionForm.designer.cs">
+      <DependentUpon>DeletionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\GoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\GoodForm.Designer.cs">
+      <DependentUpon>GoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\GoodTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\GoodTypeForm.Designer.cs">
+      <DependentUpon>GoodTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\CostForm.designer.cs">
+      <DependentUpon>CostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\IncludeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\IncludeForm.designer.cs">
+      <DependentUpon>IncludeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\IncludeOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\IncludeOrderForm.Designer.cs">
+      <DependentUpon>IncludeOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\InventarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\InventarForm.Designer.cs">
+      <DependentUpon>InventarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\InventorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\InventorForm.Designer.cs">
+      <DependentUpon>InventorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\LogisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\LogisticForm.Designer.cs">
+      <DependentUpon>LogisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\PaymentTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\PaymentTypeForm.Designer.cs">
+      <DependentUpon>PaymentTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReasonForm.Designer.cs">
+      <DependentUpon>ReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReturnIncludeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReturnIncludeForm.designer.cs">
+      <DependentUpon>ReturnIncludeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReturnRetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReturnRetailForm.Designer.cs">
+      <DependentUpon>ReturnRetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReturnSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\ReturnSaleForm.designer.cs">
+      <DependentUpon>ReturnSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\RoleTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\RoleTypeForm.Designer.cs">
+      <DependentUpon>RoleTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\RetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\RetailsForm.designer.cs">
+      <DependentUpon>RetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\SaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\SaleForm.designer.cs">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\Forms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\GoodManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\GoodManager.Designer.cs">
+      <DependentUpon>GoodManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\GoodTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\GoodTypeManager.Designer.cs">
+      <DependentUpon>GoodTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CostManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\CostManager.Designer.cs">
+      <DependentUpon>CostManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\IncludeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\IncludeManager.Designer.cs">
+      <DependentUpon>IncludeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\IncludeOrderManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\IncludeOrderManager.Designer.cs">
+      <DependentUpon>IncludeOrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\InventorManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\InventorManager.Designer.cs">
+      <DependentUpon>InventorManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\MoneyCirculationManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\MoneyCirculationManager.Designer.cs">
+      <DependentUpon>MoneyCirculationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\PaymentTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\PaymentTypeManager.Designer.cs">
+      <DependentUpon>PaymentTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReasonManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReasonManager.Designer.cs">
+      <DependentUpon>ReasonManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\RetailOrderManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\RetailOrderManager.Designer.cs">
+      <DependentUpon>RetailOrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReturnIncludeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReturnIncludeManager.Designer.cs">
+      <DependentUpon>ReturnIncludeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReturnRetailManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReturnRetailManager.Designer.cs">
+      <DependentUpon>ReturnRetailManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReturnSaleManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\ReturnSaleManager.Designer.cs">
+      <DependentUpon>ReturnSaleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\RoleTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\RoleTypeManager.Designer.cs">
+      <DependentUpon>RoleTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\RetailsManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\RetailsManager.Designer.cs">
+      <DependentUpon>RetailsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\SaleManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\SaleManager.Designer.cs">
+      <DependentUpon>SaleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\TransferMoneyManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\TransferMoneyManager.Designer.cs">
+      <DependentUpon>TransferMoneyManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\TransportingManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\TransportingManager.Designer.cs">
+      <DependentUpon>TransportingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\UserManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Managers\UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ChangePriceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ChangePriceReport.Designer.cs">
+      <DependentUpon>ChangePriceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\CostReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\CostReport.Designer.cs">
+      <DependentUpon>CostReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\GoodActionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\GoodActionReport.Designer.cs">
+      <DependentUpon>GoodActionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\IncludeAccountReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\IncludeAccountReport.Designer.cs">
+      <DependentUpon>IncludeAccountReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\OfflineSaleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\OfflineSaleReport.Designer.cs">
+      <DependentUpon>OfflineSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\CashTransport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\CashTransport.Designer.cs">
+      <DependentUpon>CashTransport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\PostSaleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\PostSaleReport.Designer.cs">
+      <DependentUpon>PostSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\TransportReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\TransportReport.Designer.cs">
+      <DependentUpon>TransportReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\RetailOrderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\RetailOrderReport.Designer.cs">
+      <DependentUpon>RetailOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\DeficitStockReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\DeficitStockReport.Designer.cs">
+      <DependentUpon>DeficitStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\DeletionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\DeletionReport.Designer.cs">
+      <DependentUpon>DeletionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\MoneyCirculationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\MoneyCirculationReport.Designer.cs">
+      <DependentUpon>MoneyCirculationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ReturnRetailSaleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ReturnRetailSaleReport.Designer.cs">
+      <DependentUpon>ReturnRetailSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ReturnIncludeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ReturnIncludeReport.Designer.cs">
+      <DependentUpon>ReturnIncludeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ReturnSaleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\ReturnSaleReport.Designer.cs">
+      <DependentUpon>ReturnSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\RetailsSaleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\RetailsSaleReport.Designer.cs">
+      <DependentUpon>RetailsSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\LogisticReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\LogisticReport.Designer.cs">
+      <DependentUpon>LogisticReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\InventarReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\InventarReport.Designer.cs">
+      <DependentUpon>InventarReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\SaleReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\SaleReport.Designer.cs">
+      <DependentUpon>SaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\IncludeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\IncludeReport.Designer.cs">
+      <DependentUpon>IncludeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\OrderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\OrderReport.Designer.cs">
+      <DependentUpon>OrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\Accounting\Reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Data\CRMDataSet.cs">
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Data\CRMDataSet.Designer.cs">
+      <DependentUpon>CRMDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\CityManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\CityManager.Designer.cs">
+      <DependentUpon>CityManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\CountryManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\CountryManager.Designer.cs">
+      <DependentUpon>CountryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\DoseManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\DoseManager.Designer.cs">
+      <DependentUpon>DoseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\CityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\CityForm.Designer.cs">
+      <DependentUpon>CityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\CountryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\CountryForm.Designer.cs">
+      <DependentUpon>CountryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\DoseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\DoseForm.Designer.cs">
+      <DependentUpon>DoseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\OperationTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\OperationTypeForm.Designer.cs">
+      <DependentUpon>OperationTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\PackingTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\PackingTypeForm.Designer.cs">
+      <DependentUpon>PackingTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\RegionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\RegionForm.Designer.cs">
+      <DependentUpon>RegionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\RegionTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\RegionTypeForm.Designer.cs">
+      <DependentUpon>RegionTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\UnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\UnitForm.Designer.cs">
+      <DependentUpon>UnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\WorkTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\Forms\WorkTypeForm.Designer.cs">
+      <DependentUpon>WorkTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\OperationTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\OperationTypeManager.Designer.cs">
+      <DependentUpon>OperationTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\PackingTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\PackingTypeManager.Designer.cs">
+      <DependentUpon>PackingTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\RegionManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\RegionManager.Designer.cs">
+      <DependentUpon>RegionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\RegionTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\RegionTypeManager.Designer.cs">
+      <DependentUpon>RegionTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\UnitManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\UnitManager.Designer.cs">
+      <DependentUpon>UnitManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\WorkTypeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\CRM\Managers\WorkTypeManager.Designer.cs">
+      <DependentUpon>WorkTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Data\WareHouseDataSet.cs">
+      <DependentUpon>WareHouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Data\WareHouseDataSet.Designer.cs">
+      <DependentUpon>WareHouseDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\Forms\WareHouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\Forms\WareHouseForm.Designer.cs">
+      <DependentUpon>WareHouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\Forms\WareHouseTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\Forms\WareHouseTypeForm.Designer.cs">
+      <DependentUpon>WareHouseTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\WareHouseManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\WareHouseManager.Designer.cs">
+      <DependentUpon>WareHouseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\WareHouseType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Operation\WareHouse\Managers\WareHouseType.Designer.cs">
+      <DependentUpon>WareHouseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RetailReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\RetailReport.Designer.cs">
+      <DependentUpon>RetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RetailSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\RetailSaleForm.designer.cs">
+      <DependentUpon>RetailSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyCirculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoneyCirculationForm.Designer.cs">
+      <DependentUpon>MoneyCirculationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OneByOneSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OneByOneSaleForm.Designer.cs">
+      <DependentUpon>OneByOneSaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPermissionForm.Designer.cs">
+      <DependentUpon>UserPermissionForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayoutManager.resx">
+      <DependentUpon>FormLayoutManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoToMenuForm.resx">
+      <DependentUpon>GoToMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\LoadingPageForm.resx">
+      <DependentUpon>LoadingPageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Maintenance\MenuManager.resx">
+      <DependentUpon>MenuManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\CashierManager.resx">
+      <DependentUpon>CashierManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\CashManager.resx">
+      <DependentUpon>CashManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ExpenseManager.resx">
+      <DependentUpon>ExpenseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\AccountManager.resx">
+      <DependentUpon>AccountManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\BankGroupManager.resx">
+      <DependentUpon>BankGroupManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\BankManager.resx">
+      <DependentUpon>BankManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ChangePriceManager.resx">
+      <DependentUpon>ChangePriceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\CompanyManager.resx">
+      <DependentUpon>CompanyManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ContractTypeManager.resx">
+      <DependentUpon>ContractTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\CurrencyManager.resx">
+      <DependentUpon>CurrencyManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\CashierForm.resx">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\CashForm.resx">
+      <DependentUpon>CashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ExpenseForm.resx">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ManagementIncludeOrderForm.resx">
+      <DependentUpon>ManagementIncludeOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\TransferMoneyForm.resx">
+      <DependentUpon>TransferMoneyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\GoodActionManager.resx">
+      <DependentUpon>GoodActionManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ManagementIncludeOrderManager.resx">
+      <DependentUpon>ManagementIncludeOrderManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\WholeSaleReportManager.resx">
+      <DependentUpon>WholeSaleReportManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\IncludeReportManager.resx">
+      <DependentUpon>IncludeReportManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\MenuCodesManager.resx">
+      <DependentUpon>MenuCodesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\PriceViewManager.resx">
+      <DependentUpon>PriceViewManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ImageForm.resx">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\OfflineNewSaleForm.resx">
+      <DependentUpon>OfflineNewSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\TransportForm.resx">
+      <DependentUpon>TransportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\OfflineNewSaleManager.resx">
+      <DependentUpon>OfflineNewSaleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\LogisticManager.resx">
+      <DependentUpon>LogisticManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\CustomerContractManager.resx">
+      <DependentUpon>CustomerContractManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\CostReportManager.resx">
+      <DependentUpon>CostReportManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\DeficitStockManager.resx">
+      <DependentUpon>DeficitStockManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\DeletionManager.resx">
+      <DependentUpon>DeletionManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\BankForm.resx">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\BankGroupForm.resx">
+      <DependentUpon>BankGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ChangedPriceForm.resx">
+      <DependentUpon>ChangedPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ContractTypeForm.resx">
+      <DependentUpon>ContractTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\CurrencyForm.resx">
+      <DependentUpon>CurrencyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\CustomerContractForm.resx">
+      <DependentUpon>CustomerContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\DeletionForm.resx">
+      <DependentUpon>DeletionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\GoodForm.resx">
+      <DependentUpon>GoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\GoodTypeForm.resx">
+      <DependentUpon>GoodTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\CostForm.resx">
+      <DependentUpon>CostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\IncludeForm.resx">
+      <DependentUpon>IncludeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\IncludeOrderForm.resx">
+      <DependentUpon>IncludeOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\InventarForm.resx">
+      <DependentUpon>InventarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\InventorForm.resx">
+      <DependentUpon>InventorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\LogisticForm.resx">
+      <DependentUpon>LogisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\PaymentTypeForm.resx">
+      <DependentUpon>PaymentTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ReasonForm.resx">
+      <DependentUpon>ReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ReturnIncludeForm.resx">
+      <DependentUpon>ReturnIncludeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ReturnRetailForm.resx">
+      <DependentUpon>ReturnRetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\ReturnSaleForm.resx">
+      <DependentUpon>ReturnSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\RoleTypeForm.resx">
+      <DependentUpon>RoleTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\RetailsForm.resx">
+      <DependentUpon>RetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\SaleForm.resx">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\Forms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\GoodManager.resx">
+      <DependentUpon>GoodManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\GoodTypeManager.resx">
+      <DependentUpon>GoodTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\CostManager.resx">
+      <DependentUpon>CostManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\IncludeManager.resx">
+      <DependentUpon>IncludeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\IncludeOrderManager.resx">
+      <DependentUpon>IncludeOrderManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\InventorManager.resx">
+      <DependentUpon>InventorManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\MoneyCirculationManager.en.resx">
+      <DependentUpon>MoneyCirculationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\MoneyCirculationManager.resx">
+      <DependentUpon>MoneyCirculationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\PaymentTypeManager.resx">
+      <DependentUpon>PaymentTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ReasonManager.resx">
+      <DependentUpon>ReasonManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\RetailOrderManager.resx">
+      <DependentUpon>RetailOrderManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ReturnIncludeManager.resx">
+      <DependentUpon>ReturnIncludeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ReturnRetailManager.resx">
+      <DependentUpon>ReturnRetailManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\ReturnSaleManager.resx">
+      <DependentUpon>ReturnSaleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\RoleTypeManager.resx">
+      <DependentUpon>RoleTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\RetailsManager.resx">
+      <DependentUpon>RetailsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\SaleManager.resx">
+      <DependentUpon>SaleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\TransferMoneyManager.resx">
+      <DependentUpon>TransferMoneyManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\TransportingManager.resx">
+      <DependentUpon>TransportingManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Managers\UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\ChangePriceReport.resx">
+      <DependentUpon>ChangePriceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\CostReport.resx">
+      <DependentUpon>CostReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\GoodActionReport.resx">
+      <DependentUpon>GoodActionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\IncludeAccountReport.resx">
+      <DependentUpon>IncludeAccountReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\OfflineSaleReport.resx">
+      <DependentUpon>OfflineSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\CashTransport.resx">
+      <DependentUpon>CashTransport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\PostSaleReport.resx">
+      <DependentUpon>PostSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\TransportReport.resx">
+      <DependentUpon>TransportReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\RetailOrderReport.resx">
+      <DependentUpon>RetailOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\DeficitStockReport.resx">
+      <DependentUpon>DeficitStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\DeletionReport.resx">
+      <DependentUpon>DeletionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\MoneyCirculationReport.resx">
+      <DependentUpon>MoneyCirculationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\ReturnRetailSaleReport.resx">
+      <DependentUpon>ReturnRetailSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\ReturnIncludeReport.resx">
+      <DependentUpon>ReturnIncludeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\ReturnSaleReport.resx">
+      <DependentUpon>ReturnSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\RetailsSaleReport.resx">
+      <DependentUpon>RetailsSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\LogisticReport.resx">
+      <DependentUpon>LogisticReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\InventarReport.resx">
+      <DependentUpon>InventarReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\SaleReport.resx">
+      <DependentUpon>SaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\IncludeReport.resx">
+      <DependentUpon>IncludeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\OrderReport.resx">
+      <DependentUpon>OrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\Accounting\Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\CityManager.resx">
+      <DependentUpon>CityManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\CountryManager.resx">
+      <DependentUpon>CountryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\DoseManager.resx">
+      <DependentUpon>DoseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\CityForm.resx">
+      <DependentUpon>CityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\CountryForm.resx">
+      <DependentUpon>CountryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\DoseForm.resx">
+      <DependentUpon>DoseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\OperationTypeForm.resx">
+      <DependentUpon>OperationTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\PackingTypeForm.resx">
+      <DependentUpon>PackingTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\RegionForm.resx">
+      <DependentUpon>RegionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\RegionTypeForm.resx">
+      <DependentUpon>RegionTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\UnitForm.resx">
+      <DependentUpon>UnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\Forms\WorkTypeForm.resx">
+      <DependentUpon>WorkTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\OperationTypeManager.resx">
+      <DependentUpon>OperationTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\PackingTypeManager.resx">
+      <DependentUpon>PackingTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\RegionManager.resx">
+      <DependentUpon>RegionManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\RegionTypeManager.resx">
+      <DependentUpon>RegionTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\UnitManager.resx">
+      <DependentUpon>UnitManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\CRM\Managers\WorkTypeManager.resx">
+      <DependentUpon>WorkTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\WareHouse\Managers\Forms\WareHouseForm.resx">
+      <DependentUpon>WareHouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\WareHouse\Managers\Forms\WareHouseTypeForm.resx">
+      <DependentUpon>WareHouseTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\WareHouse\Managers\WareHouseManager.resx">
+      <DependentUpon>WareHouseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Operation\WareHouse\Managers\WareHouseType.resx">
+      <DependentUpon>WareHouseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RetailReport.resx">
+      <DependentUpon>RetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\RetailSaleForm.resx">
+      <DependentUpon>RetailSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoneyCirculationForm.resx">
+      <DependentUpon>MoneyCirculationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneByOneSaleForm.resx">
+      <DependentUpon>OneByOneSaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPermissionForm.resx">
+      <DependentUpon>UserPermissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Images\Anbar Ikonlar\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Anbar\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Banklar\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Hesablar\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Mehsullar\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Muqavile\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Mushteriler\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Topdan satish daxili sehife\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Topdan satish\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\umumi\.DS_Store" />
+    <None Include="Images\Anbar Ikonlar\Valyuta\.DS_Store" />
+    <None Include="Modules\Operation\Accounting\Data\AccountingDataSet.xsc">
+      <DependentUpon>AccountingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Operation\Accounting\Data\AccountingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Modules\Operation\Accounting\Data\AccountingDataSet.xss">
+      <DependentUpon>AccountingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Operation\CRM\Data\CRMDataSet.xsc">
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Operation\CRM\Data\CRMDataSet.xsd" />
+    <None Include="Modules\Operation\CRM\Data\CRMDataSet.xss">
+      <DependentUpon>CRMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Operation\WareHouse\Data\WareHouseDataSet.xsc">
+      <DependentUpon>WareHouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Operation\WareHouse\Data\WareHouseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WareHouseDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Modules\Operation\WareHouse\Data\WareHouseDataSet.xss">
+      <DependentUpon>WareHouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\MainForms\" />
+    <Folder Include="Modules\Operation\HR\Data\" />
+    <Folder Include="Modules\Operation\HR\Managers\Forms\" />
+    <Folder Include="Modules\Reporting\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Anbar Ikonlar\Anbar\anbar elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Anbar\anbar.png" />
+    <Content Include="Images\Anbar Ikonlar\Anbar\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Anbar\refresh.png" />
+    <Content Include="Images\Anbar Ikonlar\Anbar\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Banklar\banklar.png" />
+    <Content Include="Images\Anbar Ikonlar\Banklar\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Banklar\elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Banklar\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Banklar\yenile.png" />
+    <Content Include="Images\Anbar Ikonlar\Hesablar\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Hesablar\elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Hesablar\hesablar.png" />
+    <Content Include="Images\Anbar Ikonlar\Hesablar\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Hesablar\yenile.png" />
+    <Content Include="Images\Anbar Ikonlar\Mehsullar\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Mehsullar\elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Mehsullar\Mehsullar.png" />
+    <Content Include="Images\Anbar Ikonlar\Mehsullar\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Mehsullar\yenile.png" />
+    <Content Include="Images\Anbar Ikonlar\Muqavile\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Muqavile\Muqavile elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Muqavile\Muqavile.png" />
+    <Content Include="Images\Anbar Ikonlar\Muqavile\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Muqavile\yenile.png" />
+    <Content Include="Images\Anbar Ikonlar\Mushteriler\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Mushteriler\Elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Mushteriler\Musteriler.png" />
+    <Content Include="Images\Anbar Ikonlar\Mushteriler\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Mushteriler\yenile.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish daxili sehife\anbar.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish daxili sehife\muesise.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish daxili sehife\muqavile.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish daxili sehife\musteri.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish daxili sehife\nomresi.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish daxili sehife\tarixi.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish\elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish\Topdan satish.png" />
+    <Content Include="Images\Anbar Ikonlar\Topdan satish\yenile.png" />
+    <Content Include="Images\Anbar Ikonlar\umumi\Search.png" />
+    <Content Include="Images\Anbar Ikonlar\umumi\unlock.png" />
+    <Content Include="Images\Anbar Ikonlar\umumi\Untitled-1-02.png" />
+    <Content Include="Images\Anbar Ikonlar\umumi\Untitled-1-03.png" />
+    <Content Include="Images\Anbar Ikonlar\Valyuta\bax.png" />
+    <Content Include="Images\Anbar Ikonlar\Valyuta\elave et.png" />
+    <Content Include="Images\Anbar Ikonlar\Valyuta\sil.png" />
+    <Content Include="Images\Anbar Ikonlar\Valyuta\Valyuta.png" />
+    <Content Include="Images\Anbar Ikonlar\Valyuta\yenile.png" />
+    <None Include="Resources\somarrrr-01.jpg" />
+    <None Include="Resources\seriya nomresi1.png" />
+    <Content Include="Resources\somar-01.ico" />
+    <None Include="Resources\Asset 121.png" />
+    <None Include="Resources\Asset 12.png" />
+    <None Include="Resources\Asset 7.png" />
+    <None Include="Resources\somar-01.png" />
+    <None Include="Images\Anbar Ikonlar\yeni satish.png" />
+    <Content Include="Images\Calendar_16x16.png" />
+    <Content Include="Images\Drafts_16x16.png" />
+    <Content Include="Images\Inbox_16x16.png" />
+    <Content Include="Images\Mail_32x32.png" />
+    <Content Include="Images\Organizer_32x32.png" />
+    <Content Include="Images\Outbox_16x16.png" />
+    <Content Include="Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="Images\Ribbon_Bold_16x16.png" />
+    <Content Include="Images\Ribbon_Close_16x16.png" />
+    <Content Include="Images\Ribbon_Close_32x32.png" />
+    <Content Include="Images\Ribbon_Content_16x16.png" />
+    <Content Include="Images\Ribbon_Content_32x32.png" />
+    <Content Include="Images\Ribbon_Exit_16x16.png" />
+    <Content Include="Images\Ribbon_Exit_32x32.png" />
+    <Content Include="Images\Ribbon_Find_16x16.png" />
+    <Content Include="Images\Ribbon_Find_32x32.png" />
+    <Content Include="Images\Ribbon_Info_16x16.png" />
+    <Content Include="Images\Ribbon_Info_32x32.png" />
+    <Content Include="Images\Ribbon_Italic_16x16.png" />
+    <Content Include="Images\Ribbon_New_16x16.png" />
+    <Content Include="Images\Ribbon_New_32x32.png" />
+    <Content Include="Images\Ribbon_Open_16x16.png" />
+    <Content Include="Images\Ribbon_Open_32x32.png" />
+    <Content Include="Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="Images\Ribbon_Save_16x16.png" />
+    <Content Include="Images\Ribbon_Save_32x32.png" />
+    <Content Include="Images\Ribbon_Underline_16x16.png" />
+    <Content Include="Images\Tasks_16x16.png" />
+    <Content Include="Images\Trash_16x16.png" />
+    <None Include="Resources\left-arrow %281%292.png" />
+    <None Include="Resources\yeni satish1.png" />
+    <None Include="Resources\odenish-01.png" />
+    <None Include="Resources\left-arrow %281%291.png" />
+    <None Include="Resources\left-arrow %281%29.png" />
+    <None Include="Resources\mehsulun qaligi1.png" />
+    <None Include="Resources\mehsulun qaligi.png" />
+    <None Include="Resources\pulun qaligi.png" />
+    <None Include="Resources\odenish.png" />
+    <None Include="Resources\bitme tarixi.png" />
+    <None Include="Resources\istehsal tarixi.png" />
+    <None Include="Resources\seriya nomresi.png" />
+    <None Include="Resources\olcu vahidi.png" />
+    <None Include="Resources\hesab1.png" />
+    <None Include="Resources\mehsul2.png" />
+    <None Include="Resources\say1.png" />
+    <None Include="Resources\mehsul1.png" />
+    <None Include="Resources\anbar.png" />
+    <None Include="Resources\mebleg.png" />
+    <None Include="Resources\qiymet.png" />
+    <None Include="Resources\say.png" />
+    <None Include="Resources\mehsul.png" />
+    <None Include="Resources\hesab.png" />
+    <None Include="Resources\bar code.png" />
+    <None Include="Resources\yeni satish.png" />
+    <None Include="Resources\satisin legvi.png" />
+    <None Include="Resources\stock.png" />
+    <None Include="Resources\logo new-04.png" />
+    <None Include="Resources\logo-04.png" />
+    <None Include="Resources\apple-icon-57x57.png" />
+    <None Include="Resources\minimize1.png" />
+    <None Include="Resources\Untitled-2-02.png" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\Optimized-log in]-03 %282%291.jpg" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\android-icon-72x72.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\maximize.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\alignhorizontalbottom_32x322.png" />
+    <None Include="Resources\alignhorizontalbottom_32x321.png" />
+    <None Include="Resources\alignhorizontalbottom_32x32.png" />
+    <None Include="Resources\delete_32x32.png" />
+    <None Include="Resources\Untitled-2-031.png" />
+    <None Include="Resources\Optimized-log in]-03 %283%291.jpg" />
+    <None Include="Resources\Optimized-log in]-03 %283%29.jpg" />
+    <None Include="Resources\e imza -03.png" />
+    <None Include="Resources\Optimized-log in]-03 %282%29.jpg" />
+    <None Include="Resources\Optimized-    .jpg" />
+    <None Include="Resources\    1.jpg" />
+    <None Include="Resources\    .jpg" />
+    <None Include="Resources\Untitled-2-03.png" />
+    <None Include="Resources\kompress olunmush.jpg" />
+    <None Include="Resources\.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MHM.Accountancy.Business\MHM.Accountancy.Business.csproj">
+      <Project>{3bed647c-62a6-4478-9337-81398314791a}</Project>
+      <Name>MHM.Accountancy.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
